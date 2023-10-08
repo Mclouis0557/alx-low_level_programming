@@ -1,21 +1,21 @@
 #include <stdio.h>
 
 /**
- *main - entry point
- *Description: Prints numbers between 00 to 89
+ *main - Entry point
+ *
  *Return : 0 on success
  */
 
 int main(void)
 {
 	int i = '0';
-	int j = '0';
+	int j = '1';
 
-	while (i <= '9')
+	while (i <= '8')
 	{
 		while (j <= '9')
 		{
-			if (!(i > j) || i == j)
+			if (i < j)
 			{
 				putchar(i);
 				putchar(j);
