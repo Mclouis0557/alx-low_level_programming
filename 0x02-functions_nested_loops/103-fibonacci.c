@@ -18,7 +18,7 @@ int main(void)
 		z = x + y;
 		if (z > 4000000)
 			break;
-		if (z % 2 ==0)
+		if (z % 2 == 0)
 			sum += z;
 		x = y;
 		y = z;
