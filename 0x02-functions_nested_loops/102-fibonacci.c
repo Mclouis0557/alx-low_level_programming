@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-  * main - Entry Point 
+  * main - Entry Point
   *
   * print the first 50 fibonacci numbers,
   * starting with 1 and 2
@@ -12,7 +12,7 @@
 int main(void)
 {
 	long int i, x, y, z;
-	
+
 	x = 1;
 	y = 2;
 
