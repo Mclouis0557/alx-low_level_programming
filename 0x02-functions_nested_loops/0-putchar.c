@@ -1,14 +1,22 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-  * main - This is an Entry Point
+  * main - This is a fucntion
   *
-  * Return: Always 0 (success)
+  * Return: returns 0
   */
 
 int main(void)
 {
-	puts("_putchar");
+	char *str = "_putchar";
+	int i = 0;
+
+	while (i < (int) sizeof(str))
+	{
+		_putchar((char)str[i]);
+		i++;
+	}
+	_putchar('\n');
 
 	return (0);
 }
