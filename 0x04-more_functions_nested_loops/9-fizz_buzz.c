@@ -12,6 +12,7 @@ int main(void)
 	int i;
 
 	i = 1;
+
 	printf("%d", i);
 	for (i = 2; i <= 100; i++)
 	{
@@ -30,7 +31,6 @@ int main(void)
 			printf(" %d", i);
 		}
 	}
-	printf(" ");
 	printf("\n");
 	return (0);
 }
