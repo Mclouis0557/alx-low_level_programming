@@ -14,10 +14,12 @@ int main(void)
 	for (pf = 2; pf <= i; pf++)
 	{
 		if (i % pf == 0)
+		{
 			i /= pf;
-		pf--;
+			pf--;
+		}
 	}
-	printf("%ld/i", pf);
+	printf("%ld\n", pf);
 
 	return (0);
 }
