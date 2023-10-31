@@ -13,9 +13,10 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	size_t len1, len2;
+	unsigned int len1, len2, i;
 	char *new_str;
-	unsigned int i, j;
+
+	i = 0;
 
 	if (s1 == NULL)
 	{
@@ -35,17 +36,21 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-
-	for (i = 0; i < len1; i++)
+	while (i < (len1 + len2))
 	{
-		new_str[i] = s1[i];
+		if (i < len1)
+		{
+			if (s1 == NULL)
+				s1 = NULL;
+			*(new_str + i) = *(s1 + i);
+		}
+		else
+		{
+			if (s2 == NULL)
+				s2 = NULL;
+			*(new_str + i) = *(s2 + i - len1);
+		}
+		i++;
 	}
-	for (j = 0; j < len2; j++)
-	{
-		new_str[len1 + j] = s2[j];
-	}
-
-	new_str[len1 + len2] = '\0';
-
 	return (new_str);
 }
